@@ -1,0 +1,67 @@
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-nav{
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 550;
+}
+#nav_personal_design{
+    background-color: red;
+}
+.navbar-light .navbar-brand{
+    color: whitesmoke;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.navbar-light .navbar-brand:hover{
+    color: black
+}
+
+
+
+/* ////////////////////////body///////////////////////////// */
+
+.part_1 {
+    width: 100%;
+}
+.body_1 {
+    margin-top: 20px;
+}
+.body_1 h3{
+    line-height: 0.75;
+}
+.body_1 h3 a{
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.pic{
+    overflow: hidden;
+}
+.pic-sm{
+    max-height: 160px;
+}
+
+.pic-sm img{
+    max-height: 160px;
+}
+
+.pic-xs{
+    max-height: 160px;
+}
+.pic-xxs{
+    max-height: 100px;
+}
+
+.pic img{
+    object-fit: cover;
+}
+.font-large{
+    font-size: 0.9em!important;
+    font-weight: 600!important;
+}

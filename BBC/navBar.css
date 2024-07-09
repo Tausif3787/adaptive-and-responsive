@@ -1,0 +1,324 @@
+
+*{
+    box-sizing: border-box;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    
+}
+
+body{
+    background-color: white;
+}
+
+nav{
+    height: 45px;
+    background-color: white;
+    border-bottom: 0.5px solid silver;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    padding-right: 16px;
+    margin-left: 16px;
+}
+
+.logo img{
+    height: auto;
+    width: 100px;
+    padding-top: 2px;
+}
+
+.nav-sign-in {
+    height: 100%;
+    padding: 0 110px 0 15px;
+}
+
+.nav-sign-in i{
+    padding-right: 5px;
+}
+
+.nLine {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.nav-bell-icon{
+    height: 100%;
+    border-right: 0.5px solid silver;
+}
+
+.nav-bell-icon i{
+    padding: 0 15px;
+}
+
+.nav-blue{
+    background-color: blue;
+}
+
+.nav-silver{
+    background-color: silver;
+}
+
+.nav-yellow{
+    background-color: yellow;
+}
+
+.nav-green{
+    background-color: green;
+}
+
+.nav-purple{
+    background-color: purple;
+}
+
+.nav-orange{
+    background-color: orange;
+}
+
+a:hover .nLine{
+    display: block;
+}
+
+.SingInText{
+    position: absolute;
+    left: 45px;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+/* -----------------------------------------main-nav---------------------------------- */
+
+.main_nav{
+    display: flex;
+    height: 100%;
+}
+
+.main_nav_entry {
+    height: 100%;
+    padding: 0 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------search-------------------------- */
+
+.search{
+    height: 100%;
+    padding-right: 15px;
+    margin-right: 15px;
+}
+
+.search i{
+    padding: 0 10px 0 15px;
+}
+
+i{
+    font-size: 22px;
+}
+/* -----------------------------DropDown------------------------- */
+
+#dropDown{
+    background-color: whitesmoke;
+    border-bottom: 0.9px solid gainsboro;
+    justify-content: center;
+    padding: 0 15px;
+    display: none ;
+}
+
+.dropDown_content {
+    width: 1330px;
+    padding: 20px 300px 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    position: relative;
+    grid-gap: 10px;
+}
+
+.dropDown_content a{
+    padding: 10px 0 10px 5px;
+    margin: 0 5px;
+}
+
+.dropDown_content a:hover{
+    color: brown;
+    
+}
+
+.dropDown_content a:nth-child(-n+7){
+    display: none;
+}
+
+#cross_icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.cross_icon:hover{
+    background-color: aqua;
+    color: white;
+}
+
+/* ---------------------------------------responsive------------------------------- */
+
+@media (max-width: 1600px){
+    .main_nav_entry{
+        flex-grow: 1;
+        padding: 0;
+    }
+    .main_nav{
+        width: 63%;
+    }
+    .dropDown_content{
+        width: calc(63% + 445px);
+    }
+}
+
+@media (max-width: 1200px){
+    #main_nav_bitsize,
+    #main_nav_sounds {
+        display: none;
+    }
+    .main_nav {
+        width: 50%;
+    }
+
+    .dropDown_content{
+        width: calc(50% + 445px);
+        grid-template-columns: repeat(7,1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding-right: 50px;
+    }
+    .dropDown_content a:nth-child(n+6){
+        display: block;
+    }
+}
+
+@media (max-width: 1000px){
+    #main_nav_iPlayer{
+        display: none;
+    }
+    .main_nav {
+        width: 60%;
+    }
+    .SingInText{
+        display: none;
+    }
+
+    .nav-sign-in{
+        padding: 0 10px 0 15px;
+    }
+
+    .dropDown_content{
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .dropDown_content a:nth-child(n+5){
+        display: block;
+    }
+}
+
+@media (max-width: 870px){
+    #main_nav_weather{
+        display: none;
+    }
+
+    .dropDown_content{
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .dropDown_content a:nth-child(n+4){
+        display: block;
+    }
+}
+
+@media (max-width: 790px){
+    #main_nav_sports{
+        display: none;
+    }
+    .dropDown_content{
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .dropDown_content a:nth-child(n+3){
+        display: block;
+    }
+}
+
+@media (max-width: 653px){
+    #main_nav_news{
+        display: none;
+    }
+    .dropDown_content{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .dropDown_content a:nth-child(n+2){
+        display: block;
+    }
+}
+
+@media (max-width: 600px){
+    #main_nav_home{
+        display: flex;
+    }
+
+    .main_nav{
+        width: 60%;
+    }
+    *{
+        font-size: 12px;
+    }
+
+    nav{
+        height: 30px;
+    }
+
+    i{
+        font-size: 15px;
+    }
+
+    .logo img{
+        height: auto;
+        width: 75px;
+        padding-top: 2px;
+    }
+
+    #nav_search_text{
+        display: none;
+    }
+    .dropDown_content {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+    .dropDown_content a:nth-child(3){
+        display: none;
+    }
+}
+
